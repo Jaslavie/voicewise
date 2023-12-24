@@ -22,6 +22,7 @@
     "react-fast-marquee": "^1.6.2",
     "react-marquee-slider": "^1.1.5",
     "react-reveal": "^1.2.2",
+    "react-router-dom": "^6.21.1",
     "react-textra": "^0.2.0",
     "styled-components": "^6.1.3"
   },
