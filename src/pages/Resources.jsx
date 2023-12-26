@@ -1,9 +1,9 @@
 function Resources() {
-    return(
-        <>
-            <h1>Resources</h1>
-        </>
-    )
+  return (
+    <>
+      <h1>Resources</h1>
+    </>
+  );
 }
 
-export default Resources
+export default Resources;
