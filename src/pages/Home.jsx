@@ -24,17 +24,26 @@ import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faHeartPulse } from "@fortawesome/free-solid-svg-icons";
+import Nav from "../components/Nav.jsx";
+import Foot from "../components/Foot.jsx";
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
+    <>
+    <Nav />
     <div className="container">
       <div className="header-contain">
         <Fade bottom delay={200}>
           <div className="subheading-header-contain">
-            <p>
-              <span>NEW</span>&nbsp; Introducing the new resources channel
-            </p>
-            <img src={Arrow} />
+            <Link to='/voicewise/resources'>
+                <p>
+                    <span>NEW</span>&nbsp; Introducing the new resources channel
+                    </p>
+                    <img src={Arrow} />
+
+            </Link>
+            
           </div>
         </Fade>
         <Fade bottom delay={500}>
@@ -360,6 +369,8 @@ function Home() {
         </div>
       </section>
     </div>
+    <Foot />
+    </>
   );
 }
 

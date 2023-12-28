@@ -1,4 +1,5 @@
 import logo from "../images/VoicewiseLogo.svg";
+import {Link} from "react-router-dom";
 
 function Nav() {
   return (
@@ -7,15 +8,16 @@ function Nav() {
         Learn on-the-go. Listen to the <a href="">Self Mastery Podcast</a>
       </div>
       <div className="nav-contain">
-        <a href="/">
-          <img src={logo} alt="" />
-        </a>
+        <Link to="/voicewise/"><img src={logo} alt="" /></Link>
+         
         <ul>
           <li>
-            <a href="/voicewise/resources">Resources</a>
+            <Link to="/voicewise/resources">Resources</Link>
+            
           </li>
           <li>
-            <a href="/voicewise/about">About</a>
+            <Link to="/voicewise/about">About</Link>
+            {/* <a href="/voicewise/about">About</a> */}
           </li>
         </ul>
       </div>

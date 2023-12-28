@@ -11,7 +11,7 @@
   --secBorder: 3px solid rgba(0, 0, 0, 0.1);
   --gradient: -webkit-linear-gradient(45deg, var(--sec), var(--prim));
   --borderHoverPrim: 3px solid var(--prim);
-
+  --boxShadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
   /* fonts */
   --paragraph: 18px;
   --paragraphL: 20px;
@@ -87,7 +87,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: var(--paragraph);
   color: var(--gray);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   margin: 0;
   text-decoration: none;
@@ -282,6 +282,25 @@ button a {
   align-items: center;
   justify-content: center;
 }
+/* navigate back or forward, use with "Link" router */
+.navigate-button {
+  background-color: #fff;
+  border: var(--secBorder);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--secTextColor);
+  padding: 14px 18px;
+}
+.navigate-button p {
+  
+  font-weight: 600;
+  font-size: var(--paragraphL);
+}
+.navigate-button:hover {
+  background-color: var(--hoverBackground);
+}
 button a:hover {
   cursor: pointer;
 }
@@ -324,7 +343,7 @@ button a:hover {
 .header-contain p {
   text-align: center;
 }
-.subheading-header-contain {
+.subheading-header-contain a{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -336,16 +355,17 @@ button a:hover {
   width: fit-content;
   background-color: var(--hoverBackground);
   transition: background-color 200ms ease;
+
 }
 .subheading-header-contain img {
   width: 20px;
   height: 20px;
   transition: transform 200ms ease-in-out;
   margin-top: 0;
+  opacity: .5;
 }
 .subheading-header-contain p {
   margin: 0;
-  color: var(--secTextColor);
 }
 .subheading-header-contain p span {
   background-color: #70738f;
@@ -356,7 +376,7 @@ button a:hover {
   color: #fff;
   font-weight: 600;
 }
-.subheading-header-contain:hover {
+.subheading-header-contain a:hover {
   cursor: pointer;
   background-color: #e2e3e9;
 }
@@ -631,4 +651,138 @@ button a:hover {
   height: auto;
   max-height: 9999px;
   transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+/* tags */
+.icon-tag-contain {
+  background-color: var(--hoverBackground);
+  color:#70738f;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 12px;
+  align-items: center;
+  width: fit-content;
+}
+.number-item .icon-tag-contain .icon{
+  color: var(--secTextColor);
+}
+.icon-tag-contain p {
+  font-weight: 600;
+  font-size: 16px;
+}
+.icon-tag-contain .icon {
+  color: var(--prim);
+}
+/* resources */
+.resources {
+  margin: 16vh 0;
+}
+.resources-contain {
+  display: grid;
+  place-content: center;
+  margin: 4vh 8vw;
+}
+.resources-contain .two-column-contain {
+  grid-template-columns: 25% 75%;
+}
+/* contains all resource elements in a 2 x n grid */
+.core-resources-contain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+.resource-item{
+  background-color: #fff;
+  box-shadow: var(--boxShadow);
+  padding: 36px;
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 12px;
+  width: 100%;
+  transition: transform 500ms ease, background-color 200ms ease;
+}
+.resource-item:hover {
+  background-color: var(--hoverBackgroundPrim);
+  border: var(--borderHoverPrim);
+  transform: scale(1.02); 
+  cursor: pointer;
+}
+.resource-item:hover .icon-tag-contain {
+  background-color: var(--hoverBackgroundPrim);
+  border: 2px solid var(--prim);
+ 
+}
+.line hr {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: none;
+  height: 2px;
+  margin: 4vh 0;
+}
+.resource-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  align-items: center;
+}
+.resource-row p {
+  font-weight: 600;
+}
+/* inside resources */
+.resource-inner-contain {
+  margin: 16vh 8vw;
+  display: grid;
+  place-content: center;
+}
+.resource-inner-contain h1 {
+  font-size: 48px;
+}
+.left-resource-contain {
+  display: grid;
+  gap: 28px;
+  justify-content: flex-start;
+}
+/* numbers */
+.numbers-contain {
+  background-color: var(--hoverBackground);
+  border-radius: 22px;
+  padding: 22px;
+  justify-content: flex-start;
+  gap: 12px;
+  display: grid;
+}
+.numbers-contain h3 {
+  color: var(--secTextColor);
+  font-weight: 600;
+}
+.number-items-contain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  
+}
+.number-item {
+  background-color: #fff;
+  border-radius: 20px;
+  border: var(--secBorder);
+  padding: 26px;
+  white-space: nowrap;
+  justify-items: center;
+  display: grid;
+  gap: 12px;
+  min-width: 200px;
+}
+
+/* animations */
+@keyframes float {
+  0% {
+
+  }
 }
