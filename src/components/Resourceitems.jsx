@@ -3,8 +3,10 @@ import PillarData from '../data/PillarData'
 import TypeData from '../data/TypeData'
 import TopicData from '../data/TopicData';
 import Tag from '../components/Tag'
+import resourcesData from '../data/ResourcesData';
 
-function Resourceitems({h3, p, iconName, iconNameType, iconNameTopic, onClick}) {
+
+function Resourceitems({id, h3, p, iconName, iconNameType, iconNameTopic, onClick}) {
     // creates a function for the selected pillar and iterates through
     // pillarsData until it finds an iconName with the same selected name in the home page
     const selectedPillar = PillarData.find(pillar => pillar.iconName === iconName);
@@ -20,7 +22,7 @@ function Resourceitems({h3, p, iconName, iconNameType, iconNameTopic, onClick}) 
       };
     
     return(
-        <>
+        <div>
         {/* takes in on click function as a prop to child components*/}
         <div className="resource-item" onClick={handleClick}>
             
@@ -35,19 +37,32 @@ function Resourceitems({h3, p, iconName, iconNameType, iconNameTopic, onClick}) 
                         <hr />
                     </div>
                     <div className="resource-row">
-                        <p>Pillar</p>
+                        <p>Pillar &nbsp;&nbsp;</p>
                         <Icontag 
                         icon = {selectedPillar.icon}
                         text = {selectedPillar.text}
-                    />
+                     />
+                    </div>
+                    <div className="resource-row">
+                        <p>Topics</p>
+                        {resourcesData[id]?.selectedTopics.map((selectedTopic, index) => {
+                            const topicInfo = TopicData.find((topic) => topic.iconNameTopic === selectedTopic.iconNameTopic);
+                            return(
+                                <Tag 
+                                    key={index}
+                                    text = {topicInfo.text}
+                                /> 
+                            );
+                        })}
+                        
                     </div>
                     
                     {/* <Tag text={selectedTopic.text} /> */}
 
                 
-           
+            </div>
+       
         </div>
-        </>
     )
 }
 

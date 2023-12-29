@@ -70,10 +70,12 @@ function Home() {
         <Fade bottom delay={1100}>
           <div className="button-contain" style={{ marginTop: "22px" }}>
             <button className="main-button">
-              <a href="">Get started</a>
+            <Link to='/voicewise/resources'>
+                Get started
+            </Link>
             </button>
             <button className="sec-button">
-              <a href="">Join the tribe</a>
+              <a href="https://discord.gg/AZvbb9sr3Y" target="_blank" rel="noopener noreferrer">Join the tribe</a>
             </button>
           </div>
         </Fade>
