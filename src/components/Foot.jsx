@@ -33,13 +33,25 @@ function Foot() {
             </div>
 
             <div className="socials-contain">
-              <a className="social-item" href="https://www.instagram.com/voicewiseofficial/" target="_blank">
+              <a
+                className="social-item"
+                href="https://www.instagram.com/voicewiseofficial/"
+                target="_blank"
+              >
                 <img src={Instagram} alt="" />
               </a>
-              <a className="social-item" href="https://www.youtube.com/@voicewise8250" target="_blank">
+              <a
+                className="social-item"
+                href="https://www.youtube.com/@voicewise8250"
+                target="_blank"
+              >
                 <img src={Youtube} alt="" />
               </a>
-              <a className="social-item" href="https://discord.com/invite/aNA5gcbrWx" target="_blank">
+              <a
+                className="social-item"
+                href="https://discord.com/invite/aNA5gcbrWx"
+                target="_blank"
+              >
                 <img src={Discord} alt="" />
               </a>
             </div>

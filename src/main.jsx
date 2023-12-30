@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import './App.css';
+import "./App.css";
 import App from "./App.jsx";
 import Resources from "./pages/Resources.jsx";
 import About from "./pages/About.jsx";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 
 // const router = createBrowserRouter([
 //   {
@@ -31,7 +30,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/voicewise/about" element={<About />} />
       </Routes>
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
-
-

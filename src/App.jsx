@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home.jsx";
 
-
 function App() {
   // console.log(window.location);
   // // sets page according to selected navLink
@@ -21,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Home/>
+      <Home />
     </>
   );
 }

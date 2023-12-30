@@ -8,7 +8,7 @@
   --hoverBackground: #edeef7;
   --hoverBackgroundPrim: #bb63ff2f;
   --secTextColor: rgba(0, 0, 0, 0.5);
-  --secBorder: 4px solid rgba(0, 0, 0, 0.1);
+  --secBorder: 3px solid rgba(0, 0, 0, 0.1);
   --gradient: -webkit-linear-gradient(45deg, var(--sec), var(--prim));
   --borderHoverPrim: 3px solid var(--prim);
   --boxShadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
@@ -81,6 +81,7 @@ h3 {
   font-size: 26px;
   margin: 0;
   color: var(--black);
+  line-height: 1.3;
 }
 h4 {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -88,6 +89,7 @@ h4 {
   color: var(--black);
   font-weight: 600;
   margin: 0;
+  line-height: 1.5;
 }
 p,
 a {
@@ -302,7 +304,6 @@ button a {
   padding: 14px 18px;
 }
 .navigate-button p {
-  
   font-weight: 600;
   font-size: var(--paragraphL);
 }
@@ -351,7 +352,7 @@ button a:hover {
 .header-contain p {
   text-align: center;
 }
-.subheading-header-contain a{
+.subheading-header-contain a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -363,14 +364,13 @@ button a:hover {
   width: fit-content;
   background-color: var(--hoverBackground);
   transition: background-color 200ms ease;
-
 }
 .subheading-header-contain img {
   width: 20px;
   height: 20px;
   transition: transform 200ms ease-in-out;
   margin-top: 0;
-  opacity: .5;
+  opacity: 0.5;
 }
 .subheading-header-contain p {
   margin: 0;
@@ -418,6 +418,7 @@ button a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 6vh 0;
 }
 .head-text-contain h1 {
   text-align: center;
@@ -695,7 +696,7 @@ button a:hover {
 /* tags */
 .icon-tag-contain {
   background-color: var(--hoverBackground);
-  color:#70738f;
+  color: #70738f;
   display: flex;
   flex-direction: row;
   white-space: nowrap;
@@ -706,7 +707,7 @@ button a:hover {
   width: fit-content;
   height: fit-content;
 }
-.number-item .icon-tag-contain .icon{
+.number-item .icon-tag-contain .icon {
   color: var(--secTextColor);
 }
 .icon-tag-contain p {
@@ -736,7 +737,7 @@ button a:hover {
   gap: 22px;
   width: 100%;
 }
-.resource-item{
+.resource-item {
   background-color: #fff;
   box-shadow: var(--boxShadow);
   padding: 36px;
@@ -745,18 +746,20 @@ button a:hover {
   grid-template-columns: auto;
   gap: 12px;
   width: 100%;
-  transition: transform 500ms ease, background-color 200ms ease;
+  height: 100%;
+  transition:
+    transform 500ms ease,
+    background-color 200ms ease;
 }
 .resource-item:hover {
   background-color: var(--hoverBackgroundPrim);
   border: var(--borderHoverPrim);
-  transform: scale(1.02); 
+  transform: scale(1.02);
   cursor: pointer;
 }
 .resource-item:hover .icon-tag-contain {
   background-color: var(--hoverBackgroundPrim);
   border: 2px solid var(--prim);
- 
 }
 .line hr {
   background-color: rgba(0, 0, 0, 0.1);
@@ -787,7 +790,6 @@ button a:hover {
 .resource-inner-contain .two-column-contain {
   gap: 56px;
   align-items: flex-start;
-  
 }
 .left-resource-contain {
   display: grid;
@@ -802,10 +804,9 @@ button a:hover {
   display: grid;
   gap: 22px;
 }
-.right-resource-contain button a{
+.right-resource-contain button a {
   width: -webkit-fill-available;
   height: fit-content;
-  
 }
 .right-resource-contain button {
   margin: 0;
@@ -831,7 +832,6 @@ button a:hover {
 .resource-inner-tag-contain p {
   color: var(--prim);
   font-size: 16px;
-
 }
 /* numbers */
 .numbers-contain {
@@ -852,7 +852,6 @@ button a:hover {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  
 }
 .number-item {
   background-color: #fff;
@@ -925,7 +924,7 @@ button a:hover {
   background-color: var(--hoverBackgroundPrim);
   color: var(--prim);
 } */
-.liner-contain  p {
+.liner-contain p {
   font-size: 14px;
   font-weight: 600;
 }
@@ -941,5 +940,47 @@ button a:hover {
   height: 30px;
   display: grid;
   place-content: center;
+}
+
+/* filter */
+.filter-buttons {
+  display: grid;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
+  grid-auto-flow: column;
+  gap: 22px;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: #fff;
+  border: var(--secBorder);
+  border-radius: 36px;
+  padding: 26px;
+  margin: 4vh 0;
+}
+.filter-button {
+  background-color: var(--hoverBackground);
+  z-index: 7000;
+  color: var(--secTextColor);
+  font-size: var(--paragraphL);
+  padding: 16px;
+  border-radius: 36px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 12px;
+  transition: background-color 200ms ease-in-out;
+  width: 100%;
+  margin: 0;
+  min-height: 130px;
+}
+.filter-button .icon {
+  font-size: 40px;
+}
+.filter-button:hover {
+  cursor: pointer;
+}
+.filter-button.active, .filter-button:hover {
+  background-color: #bb63ff85;
+  border: 2px solid var(--prim);
+  color: #fff;
 }
 
