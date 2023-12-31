@@ -62,7 +62,7 @@ function Home() {
           </Fade>
           <Fade bottom delay={800}>
             <p className="paragraphL">
-              The central place for Gen Z students to congregate and grow
+              The central place for exceptional Gen Z talent to congregate and grow
             </p>
           </Fade>
           <Fade bottom delay={1100}>
@@ -112,6 +112,9 @@ function Home() {
         </div>
 
         <Marquee>
+          <div className="marquee-contain">
+
+          <div className="marquee-line"><hr /></div>
           <div className="marquee">
             <span>free courses</span>
             <span>✦</span>
@@ -121,6 +124,8 @@ function Home() {
             <span>♥︎</span>
             <span>discover your calling</span>
             <span>✦</span>
+          </div>
+          <div className="marquee-line"><hr /></div>
           </div>
         </Marquee>
 
@@ -364,7 +369,7 @@ function Home() {
         <section style={{ marginBottom: "22vh" }}>
           <div className="head-text-contain">
             <h1>
-              Join the <span>Revolution</span>
+              <span>Feed your obsession</span> with self-development
             </h1>
             <p>Find your purpose. Craft your vision. Achieve Insane Success.</p>
             <button className="main-button">

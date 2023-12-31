@@ -14,7 +14,7 @@
   --boxShadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
   /* fonts */
   --paragraph: 18px;
-  --paragraphL: 20px;
+  --paragraphL: 22px;
   --h1: 62px;
 }
 @font-face {
@@ -257,9 +257,7 @@ a {
   padding: 4vh 0;
   border-top: var(--secBorder);
 }
-.footer-contain .marquee {
-  margin-bottom: 2vh;
-}
+
 .logo-contain {
   display: flex;
   flex-direction: column;
@@ -391,18 +389,22 @@ button a:hover {
 .subheading-header-contain:hover img {
   transform: translateX(4px);
 }
-
+.marquee-contain {
+  display: grid;
+  grid-template-columns: auto;
+  height: fit-content;
+}
 .marquee {
-  background-color: #edeef76a;
+  /* background-color: #fff; */
   backdrop-filter: blur(2px);
-  border-top: var(--secBorder);
-  border-bottom: var(--secBorder);
+  border-top: 3px solid var(--gradient);
   width: 100vw;
-  padding: 2.5vh 0;
-  gap: 12px;
+  padding: 1.8vh 0;
+  gap: 6px;
   display: grid;
   grid-auto-flow: column;
-  margin-bottom: 6vh;
+  margin: 0;
+  background-color: var(--gradient);
 }
 .marquee span {
   font-size: 18px;
@@ -410,6 +412,22 @@ button a:hover {
   color: var(--secTextColor);
   width: fit-content;
   text-align: center;
+}
+.marquee-line {
+  width: 100vw;
+}
+.marquee-line hr {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--prim),
+    var(--sec) 600px,
+    var(--hoverBackgroundPrim) 600px,
+    var(--hoverBackgroundPrim) 600px
+  );
+  margin: 0;
+  border: none;
+  width: 100%;
+  height: 4px;
 }
 /* core content */
 .head-text-contain {
@@ -751,6 +769,9 @@ button a:hover {
     transform 500ms ease,
     background-color 200ms ease;
 }
+.resource-item h3 {
+  font-size: 36px;
+}
 .resource-item:hover {
   background-color: var(--hoverBackgroundPrim);
   border: var(--borderHoverPrim);
@@ -779,7 +800,7 @@ button a:hover {
 }
 /* inside resources */
 .resource-inner-contain {
-  margin: 16vh 12vw;
+  margin: 16vh 8vw;
   display: grid;
   place-content: center;
   z-index: 5000;
@@ -924,10 +945,7 @@ button a:hover {
   background-color: var(--hoverBackgroundPrim);
   color: var(--prim);
 } */
-.liner-contain p {
-  font-size: 14px;
-  font-weight: 600;
-}
+
 
 .liner-contain .right-contain {
   gap: 0;

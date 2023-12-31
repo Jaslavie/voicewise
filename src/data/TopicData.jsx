@@ -4,5 +4,6 @@ const TopicData = [
   { text: "Role Models", iconNameTopic: "Role Models" },
   { text: "Practical Guide", iconNameTopic: "Practical Guide" },
   { text: "Tech", iconNameTopic: "Tech" },
+  { text: "Philosophy", iconNameTopic: "Philosophy" },
 ];
 export default TopicData;

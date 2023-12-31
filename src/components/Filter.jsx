@@ -55,22 +55,26 @@ export default function Filter() {
     }
   };
   // useEffect is used to perform a "side" function after a component has been rendered. here, it's to trigger the filtering function
-  // run filterItems() function whenever the selectedFilters array is changed
+  // run filterItems() function whenever the selectedFilters array is changed to change the items displayed
   useEffect(() => {
     const filterItems = () => {
         // if there is stuff in the array, meaning the user has selected filters
       if (selectedFilters.length > 0) {
         // Object.values transforms each object element in resourcesData into an array stored in tempItems
         let tempItems = Object.values(resourcesData).filter((item) =>
+        // checks each resource in resourcesData and uses filtering function "some" to check at least one element's icon name matching the first index in the selectedFilters array (should only be 1)
           item.pillarButtons.some((btn) => btn.iconName === selectedFilters[0]),
         );
+        // sets filteredItems array to the tempItems array containing all resource elements in resourcesData containing the iconName
         setFilteredItems(tempItems);
       } else {
+        // if there is nothing in the array, return all elements in resourcesData
         setFilteredItems(Object.values(resourcesData));
       }
     };
 
     filterItems();
+    // the "dependency array" that specifies the array that must change (in this case, selectedFilters) in order for the function contained inside useEffect to run
   }, [selectedFilters]);
 
   return (
@@ -108,19 +112,21 @@ export default function Filter() {
                     self-improvement journey
                   </h1>
                   <p>
-                    Tailored resources in topics ranging from career to
-                    self-improvement and mental health. Diversified for all
-                    audiences.
+                    All our favorite, select resources and pieces that we wish 
+                    we knew about earlier. Separated by the 6 pillars of life.
                   </p>
                 </div>
               </FadeIn>
             </section>
             <section>
+            <FadeIn>
               {/* filter buttons */}
               <div className="filter-buttons">
                 {/* from the filtered array, map each element to a button */}
                 {/* category represents each element in the filters array: iconName */}
+                {/* takes in initial array of elements in pillar data from the first initializer "let filters" */}
                 {filters.map((category, index) => {
+                    // iterates through PillarData to finds the element with the iconName that corresponds to the selected category
                   const pillarInfo = PillarData.find(
                     (pillar) => pillar.iconName === category,
                   );
@@ -128,8 +134,9 @@ export default function Filter() {
                   return (
                     <button
                       key={index}
-                    //   sets the "selectedCategory" prop to category 
+                    //   sets the "selectedCategory" prop to the specifically selected category
                       onClick={() => handleFilterButtonClick(category)}
+                    //   if after running the handleFilter function the new selectedFilters array includes the category, then set to active
                       className={`filter-button ${
                         selectedFilters?.includes(category) ? "active" : ""
                       }`}
@@ -144,6 +151,7 @@ export default function Filter() {
                   );
                 })}
               </div>
+              </FadeIn>
               {/* filtered elements */}
               <div className="resources-contain">
                 <FadeIn>

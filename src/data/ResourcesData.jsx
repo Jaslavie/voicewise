@@ -4,7 +4,7 @@ const resourcesData = {
   mastery: {
     id: "mastery",
     iconNameType: "Reading",
-    h1: "Mastery: Robert Greene",
+    h1: "Mastery: The secret to dominating your field",
     p: "Become a master in what you were meant to do: A modern philosophical exploration on how to achieve mastery by following what you're naturally good at.",
     //   pillar
     iconName: "Personal",
@@ -103,6 +103,95 @@ const resourcesData = {
       { readReason: "a practical guide to management" },
     ],
   },
+
+  design: {
+    id: "design",
+    iconNameType: "Reading",
+    h1: "Design for a Better World: Building Sustainable Design Systems",
+    p: "Community-centered, collaborative, and high-impact design philsophies: used for industry, or to design your own life.",
+    //   pillar
+    iconName: "Career",
+    selectedTopics: [
+      { iconNameTopic: "Philosophy" },
+      { iconNameTopic: "Practical Guide" }
+    ],
+
+    //   shown inside resourceInner
+    readTime: "2 wks",
+    price: "$30",
+    pageCount: "300",
+    pillarButtons: [
+      // each element in the array is defined under "buttonInfo"
+      { iconName: "Career" },
+    ],
+    summary:
+      "Want to explore pattern-driven approaches to re-designing complex systems? This book leverages a new concept of design, one that is community-driven, circular, and massively crossfunctional. This is a wonderful book breaking down the process towards meaningful, collaborative creation.",
+    sneakItems: [
+      {
+        iconNameSneak: "Quote",
+        sneakTitle:
+          '"Design with and by people, not for them.',
+        sneakDescription: "Designers are the facilitators. People are the real experts on creating meaningful products. Collaboration is essential.",
+      },
+      {
+        iconNameSneak: "Insight",
+        sneakTitle: "Linear Causality is the root node",
+        sneakDescription:
+          "Humans sneak linear causality because it's the most simple, algorithmic explanation for the world. This heuristics-driven pov means that feedback loops need to favor automicity and speed",
+      },
+      {
+        iconNameSneak: "Quote",
+        sneakTitle: '"Complexity is the fact of the world, simplicity is the mind"',
+        sneakDescription:
+          "Universalality Principle: Simplicity drives meaning. Complex things cannot be universally understood. The goal of design is to filter out critical information to accelerate decision-making, while still making users feel in control.",
+      },
+      {
+        iconNameSneak: "Interesting",
+        sneakTitle: "Lessons from Military History: Smaller, independent forces can beat large, well-oranized armies.",
+        sneakDescription:
+          "Guerilla warfare and unit modularization (invented by Napoleon) were keys to military success. The same principle of independent, agile, and modularized teams can be applied to business. Lesson: study history.",
+      },
+      {
+        iconNameSneak: "Insight",
+        sneakTitle: "Incrementalism: Modularize your impact",
+        sneakDescription:
+          "Guerilla warfare and unit modularization (invented by Napoleon) were keys to military success. The same principle of independent, agile, and modularized teams can be applied to business. Lesson: study history.",
+      },
+      {
+        iconNameSneak: "Insight",
+        sneakTitle: "Community-driven design: empowering creative citizenry",
+        sneakDescription:
+          "People are the most experienced and most passionate about fixing their probelms. Aim to be a facilitator and democratize design: develop open-source software that allows citizens to design for themselves (DIY).",
+      },
+      {
+        iconNameSneak: "Concept",
+        sneakTitle: "Systems Design: Bias toward Loosely rather than Tightly Coupled",
+        sneakDescription:
+          "Consider an atom with multiple branches. Tightly coupled systems communicate more quickly (shorter connections), but are heavily dependent on each other. Loosely coupled systems are slower but more localized, resilient, and independent. The former favors short term effeciency, the latter long-term resilience and sustainability.",
+      },
+      {
+        iconNameSneak: "Lesson",
+        sneakTitle: "The Global Implications of Effective Design Systems",
+        sneakDescription:
+          "Linear, technocratic systems have allowed acceptance of dictators and colonization into the mainstream. The solution: favor recursive, multi-layered, and XFN system models for long-term reliability and resilience.",
+      },
+      {
+        iconNameSneak: "Interesting",
+        sneakTitle: "For Game Designers: Remember Feedback Loops",
+        sneakDescription:
+          "Favor linear systems (remember, our brains actively seek simplicity over complexity) and follow heuristics. Feedback loops should be quick, simplistic, and reinforced with rewards.",
+      },
+    ],
+    link: "https://mitpress.mit.edu/9780262548304/design-for-a-better-world/",
+    coreTopic: "Design Methodology",
+    type: "Conceptual Book",
+    readElements: [
+      { readReason: "you are a designer wanting to explore a high-level design philosophy" },
+      { readReason: "you want to build a product delivering meaningful impact" },
+      { readReason: "you want to design a sustainable, effective system for yourself." },
+    ],
+  },
+
 };
 
 export default resourcesData;
