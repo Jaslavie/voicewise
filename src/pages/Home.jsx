@@ -27,6 +27,7 @@ import { faHeartPulse } from "@fortawesome/free-solid-svg-icons";
 import Nav from "../components/Nav.jsx";
 import Foot from "../components/Foot.jsx";
 import { Link } from "react-router-dom";
+import FadeIn from "react-fade-in/lib/FadeIn.js";
 
 function Home() {
   return (
@@ -129,8 +130,10 @@ function Home() {
           </div>
         </Marquee>
 
-        {/* overview */}
+        {/* overview */} 
+       
         <section>
+         
           <div className="head-text-contain">
             <div className="tag">OVERVIEW</div>
             <h1>
@@ -181,6 +184,7 @@ function Home() {
               </a>
             </div>
           </div>
+        
         </section>
 
         {/* philosophy */}
@@ -377,6 +381,7 @@ function Home() {
             </button>
           </div>
         </section>
+      
       </div>
       <Foot />
     </>

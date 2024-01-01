@@ -110,7 +110,7 @@ const resourcesData = {
     h1: "Design for a Better World: Building Sustainable Design Systems",
     p: "Community-centered, collaborative, and high-impact design philsophies: used for industry, or to design your own life.",
     //   pillar
-    iconName: "Career",
+    iconName: "Knowledge",
     selectedTopics: [
       { iconNameTopic: "Philosophy" },
       { iconNameTopic: "Practical Guide" }
@@ -122,7 +122,7 @@ const resourcesData = {
     pageCount: "300",
     pillarButtons: [
       // each element in the array is defined under "buttonInfo"
-      { iconName: "Career" },
+      { iconName: "Knowledge" },
     ],
     summary:
       "Want to explore pattern-driven approaches to re-designing complex systems? This book leverages a new concept of design, one that is community-driven, circular, and massively crossfunctional. This is a wonderful book breaking down the process towards meaningful, collaborative creation.",
@@ -130,7 +130,7 @@ const resourcesData = {
       {
         iconNameSneak: "Quote",
         sneakTitle:
-          '"Design with and by people, not for them.',
+          '"Design with and by people, not for them."',
         sneakDescription: "Designers are the facilitators. People are the real experts on creating meaningful products. Collaboration is essential.",
       },
       {
