@@ -30,8 +30,8 @@ const SneakData = [
   },
   {
     iconSneak: <FontAwesomeIcon icon={faCake} />,
-    textSneak: "Interesting",
-    iconNameSneak: "Interesting",
+    textSneak: "Fun Fact",
+    iconNameSneak: "Fun Fact",
   },
   {
     iconSneak: <FontAwesomeIcon icon={faApple} />,

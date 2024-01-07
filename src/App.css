@@ -461,6 +461,7 @@ button a:hover {
   padding: 12px;
   border-radius: 12px;
   width: fit-content;
+  max-height: 40px;
 }
 .growth-items-contain {
   display: grid;
@@ -1112,7 +1113,8 @@ button a:hover {
   max-width: 40vw;
 }
 .team-contain {
-  margin: 6vh 8vw;
+  margin: 12vh 8vw;
+  height: 70vh;
  display: grid;
  grid-auto-flow: column;
  gap: 56px;
@@ -1141,4 +1143,19 @@ button a:hover {
   display: flex;
   gap: 12px;
   flex-direction: row;
+}
+.link-icon {
+  background-color: var(--hoverBackground);
+  color: var(--hoverBackgroundDark);
+  border-radius: 12px;
+  padding: 16px;
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-content: center;
+  transition: background-color 200ms ease;
+}
+.link-icon:hover {
+  background-color: var(--prim);
+  color: #fff;
 }

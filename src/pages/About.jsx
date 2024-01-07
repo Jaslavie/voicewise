@@ -10,6 +10,8 @@ import Growth from '../images/sparkleGrowth.svg'
 import Wand from '../images/sparkleWand.svg'
 import CTA from "../components/CTA";
 import Profile from "../images/profile picture jasmine.jpeg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 function About() {
   return (
     <>
@@ -81,8 +83,17 @@ This is how Voicewise was born, and we hope to inspire you to actively leverage 
              
               <div className="tag">Founder</div>
               <div className="tag">Designer</div>
+              
+              <a
+                className="link-icon"
+                href="https://www.linkedin.com/in/jaslavie"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin}/>
+              </a>
               </div>
-              <p>From working as a product designer at a b2c startup scaling to b2b to founding roles in end-to-end startup ecosystems, Jasmine is dedicated to fostering open source, lifelong education.</p>
+              <p>From working as a Product Designer at a B2C startup scaling to B2B to founding roles in end-to-end startup ecosystems, Jasmine is dedicated to fostering open source, lifelong learning.</p>
             </div>
           </div>
         </div>

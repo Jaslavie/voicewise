@@ -22,7 +22,7 @@ const resourcesData = {
       { iconName: "Personal" },
     ],
     summary:
-      "Want to get really good at something? Want to discover the secret to pleasure and happiness? This book discusses flow, natural talents, deep focus, powerful passions, and behavioral patterns across masters (da vinci, darwin)",
+      "Want to get really good at something? Want to discover the secret to pleasure and happiness? This book discusses flow, natural talents, deep focus, powerful passions, and behavioral patterns across masters (da vinci, darwin). TL;DR: obsessive observation + intense focus + repetitive (directional rather than results-orientated) action = mastery.",
     sneakItems: [
       {
         iconNameSneak: "Lesson",
@@ -32,9 +32,51 @@ const resourcesData = {
       },
       {
         iconNameSneak: "Action",
-        sneakTitle: "The early keys to mastery: observation and obsession",
+        sneakTitle: "Connect with your enivronment: observation and obsession",
         sneakDescription:
-          "da Vinci and Darwin had one thing in common: both were intensely passionate about something. This translated into nonstop, down-to-the-details observation",
+          "da Vinci and Darwin had one thing in common: both were intensely passionate about something. This translated into nonstop, down-to-the-details observation with their environments: disecting and analyzing each peice of information in tandem.",
+      },
+      {
+        iconNameSneak: "Action",
+        sneakTitle: "Supreme Focus: Make learning every skills, practice, and culture of your field your obsession",
+        sneakDescription:
+          "The combination of intense, rationality-driven discipline and intuition is the key to mastery. People with a diverse, large database of experiences and knowledge form stronger connections between ideas, leading to more novel insights.",
+      },
+      {
+        iconNameSneak: "Quote",
+        sneakTitle: '"The intuitive mind is a gift and the rational mind is a faithful servant. We have created a society that honors the servant and has forgotten the gift."',
+        sneakDescription:
+          "Logical, sequential thinking is a mental shortcut and oversimplified way to appraoch ideas. Instead, leverage the rational intensity of focus and patience toward organic, richly interconnected ideas.",
+      },
+      {
+        iconNameSneak:"Lesson",
+        sneakTitle: 'Dissatisfaction and openness fuels innovation',
+        sneakDescription:
+          "Dissatisfaction and high standards fuels progress and an obsedssion with improvement. Openness expands your frame of mind, opens up new perspectives, and dis-engages your ego to create truly meaningful and interconnected work.",
+      },
+      {
+        iconNameSneak:"Lesson",
+        sneakTitle: 'Be a Masochist: seek pain, discomfort, and the unfamiliar',
+        sneakDescription:
+          "Praise is dangerous. Seek uncomfortable feedback, risky opportunities, and painful practice targeting your core weaknesses rather than what feels like progress. Failure teaches you 1) clarity and 2) mental toughness.",
+      },
+      {
+        iconNameSneak:"Action",
+        sneakTitle: 'The power of your social circle: seek meaningful human contact',
+        sneakDescription:
+          "Mozart was surrounded by the most powerful courtiers of his time. Proust explored and observed the hidden interactions within high society at Salons. Expand your social circle and intensively observe the masters of your field. ",
+      },
+      {
+        iconNameSneak:"Action",
+        sneakTitle: 'Command attention and influence through strategic action',
+        sneakDescription:
+          "Understand that people are bias results and simplicity. You must strategically adapt your charcter to suit different environments and people. Focus on great work, integrity, and avoiding heavily emotional encounters",
+      },
+      {
+        iconNameSneak:"Action",
+        sneakTitle: 'Iteration: Cycle between observation, entertainment of ideas, and application',
+        sneakDescription:
+          "The best ideas are those that can be applied to people. There needs to be a balance between open consumption, experimentation, and constant iteration to generate truly impact-driven ideas.",
       },
     ],
     link: "https://www.amazon.com/Mastery-Robert-Greene/dp/014312417X/ref=asc_df_014312417X/?tag=hyprod-20&linkCode=df0&hvadid=312403172530&hvpos=&hvnetw=g&hvrand=5395136896528776407&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031573&hvtargid=pla-437083755995&psc=1&mcid=9d41af9afe893d3fb62e7ba249813fe5&tag=&ref=&adgrpid=60300244057&hvpone=&hvptwo=&hvadid=312403172530&hvpos=&hvnetw=g&hvrand=5395136896528776407&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031573&hvtargid=pla-437083755995&gclid=EAIaIQobChMIoZ678_uzgwMVaRetBh3QVwapEAQYASABEgLuJfD_BwE",
@@ -125,7 +167,7 @@ const resourcesData = {
       { iconName: "Knowledge" },
     ],
     summary:
-      "Want to explore pattern-driven approaches to re-designing complex systems? This book leverages a new concept of design, one that is community-driven, circular, and massively crossfunctional. This is a wonderful book breaking down the process towards meaningful, collaborative creation.",
+      "Want to explore pattern-driven approaches to re-designing complex systems? This book leverages a new concept of design, one that is community-driven, circular, and massively crossfunctional. This is a wonderful book breaking down the process towards meaningful, collaborative creation. The core principle: Design with people, not for them.",
     sneakItems: [
       {
         iconNameSneak: "Quote",
@@ -146,7 +188,7 @@ const resourcesData = {
           "Universalality Principle: Simplicity drives meaning. Complex things cannot be universally understood. The goal of design is to filter out critical information to accelerate decision-making, while still making users feel in control.",
       },
       {
-        iconNameSneak: "Interesting",
+        iconNameSneak: "Fun Fact",
         sneakTitle: "Lessons from Military History: Smaller, independent forces can beat large, well-oranized armies.",
         sneakDescription:
           "Guerilla warfare and unit modularization (invented by Napoleon) were keys to military success. The same principle of independent, agile, and modularized teams can be applied to business. Lesson: study history.",
@@ -155,7 +197,13 @@ const resourcesData = {
         iconNameSneak: "Insight",
         sneakTitle: "Incrementalism: Modularize your impact",
         sneakDescription:
-          "Guerilla warfare and unit modularization (invented by Napoleon) were keys to military success. The same principle of independent, agile, and modularized teams can be applied to business. Lesson: study history.",
+          "Guerilla warfare and unit modularization (invented by Napoleon) were keys to military success. The same principle of independent, agile, and modularized efforts toward solving design problems can be applied. Lesson: study history.",
+      },
+      {
+        iconNameSneak: "Fun Fact",
+        sneakTitle: "The ironic birth of the 5-day work week",
+        sneakDescription:
+          "After the birth of the Model T cars, Ford decided to give his workers a 2 day break to increse the travel time which would increase the demand for his automobiles. This was essentially a business ploy, not out of any ethical standards that would be the reasoning today.",
       },
       {
         iconNameSneak: "Insight",
@@ -176,10 +224,16 @@ const resourcesData = {
           "Linear, technocratic systems have allowed acceptance of dictators and colonization into the mainstream. The solution: favor recursive, multi-layered, and XFN system models for long-term reliability and resilience.",
       },
       {
-        iconNameSneak: "Interesting",
+        iconNameSneak: "Fun Fact",
         sneakTitle: "For Game Designers: Remember Feedback Loops",
         sneakDescription:
           "Favor linear systems (remember, our brains actively seek simplicity over complexity) and follow heuristics. Feedback loops should be quick, simplistic, and reinforced with rewards.",
+      },
+      {
+        iconNameSneak: "Insight",
+        sneakTitle: "Automated systems to augment human ability, not the other way around",
+        sneakDescription:
+          "AI and neural networks only go so far to speedily apply human-curated algorithms and formulas, but it cannot creatively reason new ideas. Automation should be used to enhance human functioning by allowing scientists to focus on problems and interpretation instead of mathmatical mechanics.",
       },
     ],
     link: "https://mitpress.mit.edu/9780262548304/design-for-a-better-world/",

@@ -42,6 +42,7 @@ function Foot() {
                 className="social-item"
                 href="https://www.instagram.com/voicewiseofficial/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={Instagram} alt="" />
               </a>
@@ -49,6 +50,7 @@ function Foot() {
                 className="social-item"
                 href="https://www.youtube.com/@voicewise8250"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={Youtube} alt="" />
               </a>
@@ -56,6 +58,7 @@ function Foot() {
                 className="social-item"
                 href="https://discord.com/invite/aNA5gcbrWx"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={Discord} alt="" />
               </a>
