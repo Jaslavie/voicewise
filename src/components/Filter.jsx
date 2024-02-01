@@ -13,7 +13,7 @@ import PillarData from "../data/PillarData.jsx";
 
 // filter elements inside of the resources page
 export default function Filter() {
-//   handle clicked resources
+  //   handle clicked resources
   const [selectedResource, setSelectedResource] = useState(null);
   const navigate = useNavigate();
 
@@ -46,7 +46,7 @@ export default function Filter() {
       let filters = selectedFilters.filter(
         (element) => element !== selectedCategory,
       );
-    //   sets "selectedFilters" to the new array
+      //   sets "selectedFilters" to the new array
       setSelectedFilters(filters);
     } else {
       // if the selected category is not already included in the array, switch the entire array into the new selected category
@@ -58,11 +58,11 @@ export default function Filter() {
   // run filterItems() function whenever the selectedFilters array is changed to change the items displayed
   useEffect(() => {
     const filterItems = () => {
-        // if there is stuff in the array, meaning the user has selected filters
+      // if there is stuff in the array, meaning the user has selected filters
       if (selectedFilters.length > 0) {
         // Object.values transforms each object element in resourcesData into an array stored in tempItems
         let tempItems = Object.values(resourcesData).filter((item) =>
-        // checks each resource in resourcesData and uses filtering function "some" to check at least one element's icon name matching the first index in the selectedFilters array (should only be 1)
+          // checks each resource in resourcesData and uses filtering function "some" to check at least one element's icon name matching the first index in the selectedFilters array (should only be 1)
           item.pillarButtons.some((btn) => btn.iconName === selectedFilters[0]),
         );
         // sets filteredItems array to the tempItems array containing all resource elements in resourcesData containing the iconName
@@ -112,45 +112,43 @@ export default function Filter() {
                     self-improvement journey
                   </h1>
                   <p>
-                    All our favorite, select resources and pieces that we wish 
+                    All our favorite, select resources and pieces that we wish
                     we knew about earlier. Separated by the 6 pillars of life.
                   </p>
                 </div>
               </FadeIn>
             </section>
             <section>
-            <FadeIn>
-              {/* filter buttons */}
-              <div className="filter-buttons">
-                {/* from the filtered array, map each element to a button */}
-                {/* category represents each element in the filters array: iconName */}
-                {/* takes in initial array of elements in pillar data from the first initializer "let filters" */}
-                {filters.map((category, index) => {
+              <FadeIn>
+                {/* filter buttons */}
+                <div className="filter-buttons">
+                  {/* from the filtered array, map each element to a button */}
+                  {/* category represents each element in the filters array: iconName */}
+                  {/* takes in initial array of elements in pillar data from the first initializer "let filters" */}
+                  {filters.map((category, index) => {
                     // iterates through PillarData to finds the element with the iconName that corresponds to the selected category
-                  const pillarInfo = PillarData.find(
-                    (pillar) => pillar.iconName === category,
-                  );
+                    const pillarInfo = PillarData.find(
+                      (pillar) => pillar.iconName === category,
+                    );
 
-                  return (
-                    <button
-                      key={index}
-                    //   sets the "selectedCategory" prop to the specifically selected category
-                      onClick={() => handleFilterButtonClick(category)}
-                    //   if after running the handleFilter function the new selectedFilters array includes the category, then set to active
-                      className={`filter-button ${
-                        selectedFilters?.includes(category) ? "active" : ""
-                      }`}
-                    >
-                      {/* returns the text and icon corresponding to iconName */}
-                      <div className="icon">
-                      {pillarInfo.icon}
-                      </div>
-                      
-                      {pillarInfo.text}
-                    </button>
-                  );
-                })}
-              </div>
+                    return (
+                      <button
+                        key={index}
+                        //   sets the "selectedCategory" prop to the specifically selected category
+                        onClick={() => handleFilterButtonClick(category)}
+                        //   if after running the handleFilter function the new selectedFilters array includes the category, then set to active
+                        className={`filter-button ${
+                          selectedFilters?.includes(category) ? "active" : ""
+                        }`}
+                      >
+                        {/* returns the text and icon corresponding to iconName */}
+                        <div className="icon">{pillarInfo.icon}</div>
+
+                        {pillarInfo.text}
+                      </button>
+                    );
+                  })}
+                </div>
               </FadeIn>
               {/* filtered elements */}
               <div className="resources-contain">

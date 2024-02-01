@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faCake,
-    faLightbulb,
+  faCake,
+  faLightbulb,
   faQuoteLeft,
   faRunning,
   faStar,

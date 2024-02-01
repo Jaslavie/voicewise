@@ -63,7 +63,8 @@ function Home() {
           </Fade>
           <Fade bottom delay={800}>
             <p className="paragraphL">
-              The central place for exceptional Gen Z talent to congregate and grow
+              The central place for exceptional Gen Z talent to congregate and
+              grow
             </p>
           </Fade>
           <Fade bottom delay={1100}>
@@ -114,26 +115,28 @@ function Home() {
 
         <Marquee>
           <div className="marquee-contain">
-
-          <div className="marquee-line"><hr /></div>
-          <div className="marquee">
-            <span>free courses</span>
-            <span>✦</span>
-            <span>curated resources for anyone, anywhere</span>
-            <span>▲</span>
-            <span>design your reality</span>
-            <span>♥︎</span>
-            <span>discover your calling</span>
-            <span>✦</span>
-          </div>
-          <div className="marquee-line"><hr /></div>
+            <div className="marquee-line">
+              <hr />
+            </div>
+            <div className="marquee">
+              <span>free courses</span>
+              <span>✦</span>
+              <span>curated resources for anyone, anywhere</span>
+              <span>▲</span>
+              <span>design your reality</span>
+              <span>♥︎</span>
+              <span>discover your calling</span>
+              <span>✦</span>
+            </div>
+            <div className="marquee-line">
+              <hr />
+            </div>
           </div>
         </Marquee>
 
-        {/* overview */} 
-       
+        {/* overview */}
+
         <section>
-         
           <div className="head-text-contain">
             <div className="tag">OVERVIEW</div>
             <h1>
@@ -184,7 +187,6 @@ function Home() {
               </a>
             </div>
           </div>
-        
         </section>
 
         {/* philosophy */}
@@ -381,7 +383,6 @@ function Home() {
             </button>
           </div>
         </section>
-      
       </div>
       <Foot />
     </>

@@ -115,7 +115,7 @@ a {
   color: var(--black);
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(2px);
-  z-index: 8000;
+  z-index: 10000;
 }
 .nav-contain ul {
   margin: 0;
@@ -289,7 +289,7 @@ button a {
   white-space: nowrap;
   width: fit-content;
   border-radius: 20px;
-  z-index: 8000;
+  z-index: 7000;
   transition: background-color 200ms ease;
   gap: 12px;
   display: flex;
@@ -829,7 +829,7 @@ button a:hover {
   flex-direction: column;
   width: fit-content;
   align-items: flex-start;
- 
+
   height: fit-content;
   min-height: 1000px;
 }
@@ -840,16 +840,13 @@ button a:hover {
   border-radius: 46px;
 
   flex-direction: column;
-  display: flex; 
+  display: flex;
   gap: 22px;
   top: 5vh;
   min-height: 50vh;
   height: fit-content;
 
   width: 100%;
-
-
- 
 }
 .right-resource-contain button a {
   width: -webkit-fill-available;
@@ -972,7 +969,6 @@ button a:hover {
   color: var(--prim);
 } */
 
-
 .liner-contain .right-contain {
   gap: 0;
 }
@@ -1011,10 +1007,13 @@ button a:hover {
   border: 2px solid rgba(0, 0, 0, 0.1);
   display: grid;
   gap: 12px;
-  transition: background-color 200ms ease-in-out;
+  transition:
+    background-color 200ms ease-in-out,
+    transform 200ms ease-in-out;
   width: 100%;
   margin: 0;
   min-height: 130px;
+  cursor: pointer;
 }
 .filter-button .icon {
   font-size: 40px;
@@ -1022,10 +1021,13 @@ button a:hover {
 .filter-button:hover {
   cursor: pointer;
 }
-.filter-button.active, .filter-button:hover {
+.filter-button.active,
+.filter-button:hover {
   background-color: #bb63ff85;
   border: 2px solid var(--prim);
   color: #fff;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 /* about */
 .about-contain {
@@ -1043,7 +1045,7 @@ button a:hover {
   font-size: 26px;
   text-align: center;
 }
-.content-contain{
+.content-contain {
   margin: auto 8vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1085,7 +1087,6 @@ button a:hover {
 .value-item p {
   text-align: left;
   font-size: var(--paragraph);
-  
 }
 .value-item img {
   width: 80px;
@@ -1106,20 +1107,21 @@ button a:hover {
   margin: 0;
   width: -webkit-fill-available;
   gap: 16px;
-  padding: 56px
+  padding: 56px;
 }
-.cta-contain p, .cta-contain h1{
+.cta-contain p,
+.cta-contain h1 {
   text-align: center;
   max-width: 40vw;
 }
 .team-contain {
   margin: 12vh 8vw;
   height: 70vh;
- display: grid;
- grid-auto-flow: column;
- gap: 56px;
- align-items: center;
- justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 56px;
+  align-items: center;
+  justify-content: center;
 }
 .team-item {
   display: grid;
@@ -1158,4 +1160,77 @@ button a:hover {
 .link-icon:hover {
   background-color: var(--prim);
   color: #fff;
+}
+
+/** dropdown */
+.drop-down {
+  padding: 14vh 8vw;
+  width: 100vw;
+}
+.drop-down-contain {
+  box-shadow: var(--boxShadow);
+  padding: 40px;
+  border-radius: 22px;
+  transition: transform 200ms ease;
+  width: 100%;
+  cursor: pointer;
+}
+.drop-down-contain h2 {
+  text-align: left;
+}
+.drop-down-contain button {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+.drop-down-contain:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.drop-down-contain:hover .expand-button {
+  background-color: #bb63ff48;
+}
+button .expand-button {
+  background: var(--hoverBackgroundPrim);
+  border-radius: 20px;
+  padding: 12px 22px;
+  transition: background-color 200ms ease;
+  width: fit-content;
+}
+.expand-button span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.expand-button:hover {
+  cursor: pointer;
+}
+.expand-button:hover span,
+.drop-down-contain:hover .expand-button span {
+  color: var(--prim);
+  cursor: pointer;
+}
+.expand-button p {
+  color: var(--prim);
+  font-weight: 600;
+}
+button .expanded{
+  background-color: var(--hoverBackground);
+}
+.expanded span {
+  color: var(--hoverBackgroundDark);
+}
+.drop-down-contain:hover button .expanded {
+  background-color: var(--hoverBackground);
+}
+.drop-down-contain:hover .expanded span {
+  color: var(--hoverBackgroundDark);
+}
+.drop-down-contain .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

@@ -4,14 +4,14 @@ import TypeData from "../data/TypeData";
 import TopicData from "../data/TopicData";
 import Tag from "../components/Tag";
 import resourcesData from "../data/ResourcesData";
-
+import PropTypes from "prop-types";
 function Resourceitems({
   id,
   h3,
   p,
   iconName,
   iconNameType,
-  iconNameTopic,
+  // iconNameTopic,
   onClick,
 }) {
   // creates a function for the selected pillar and iterates through
@@ -22,9 +22,9 @@ function Resourceitems({
   const selectedType = TypeData.find(
     (type) => type.iconNameType === iconNameType,
   );
-  const selectedTopic = TopicData.find(
-    (topic) => topic.iconNameTopic === iconNameTopic,
-  );
+  // const selectedTopic = TopicData.find(
+  //   (topic) => topic.iconNameTopic === iconNameTopic,
+  // );
 
   // need a handleclick function in order to pass onClick in resource.jsx
   const handleClick = () => {
@@ -63,5 +63,14 @@ function Resourceitems({
     </div>
   );
 }
+Resourceitems.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  h3: PropTypes.string,
+  p: PropTypes.string,
+  iconName: PropTypes.string,
+  iconNameType: PropTypes.string,
+  iconNameTopic: PropTypes.string,
+  onClick: PropTypes.func,
+};
 
 export default Resourceitems;

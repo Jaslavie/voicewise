@@ -9,21 +9,24 @@ function Foot() {
   return (
     <>
       <div className="footer-contain">
-      <Marquee>
+        <Marquee>
           <div className="marquee-contain">
-
-          <div className="marquee-line"><hr /></div>
-          <div className="marquee">
-            <span>free courses</span>
-            <span>✦</span>
-            <span>curated resources for anyone, anywhere</span>
-            <span>▲</span>
-            <span>design your reality</span>
-            <span>♥︎</span>
-            <span>discover your calling</span>
-            <span>✦</span>
-          </div>
-          <div className="marquee-line"><hr /></div>
+            <div className="marquee-line">
+              <hr />
+            </div>
+            <div className="marquee">
+              <span>free courses</span>
+              <span>✦</span>
+              <span>curated resources for anyone, anywhere</span>
+              <span>▲</span>
+              <span>design your reality</span>
+              <span>♥︎</span>
+              <span>discover your calling</span>
+              <span>✦</span>
+            </div>
+            <div className="marquee-line">
+              <hr />
+            </div>
           </div>
         </Marquee>
         <div className="footer-wrapper">
