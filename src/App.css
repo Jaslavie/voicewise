@@ -1164,7 +1164,7 @@ button a:hover {
 
 /** dropdown */
 .drop-down {
-  padding: 14vh 8vw;
+  padding: 0 8vw;
   width: 100vw;
 }
 .drop-down-contain {
